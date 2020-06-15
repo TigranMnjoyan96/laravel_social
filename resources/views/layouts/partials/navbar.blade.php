@@ -44,7 +44,7 @@
               <a href="{{ route('signup') }}" class="nav-link">Sign Up</a>
           </li>
           <li class="nav-item">
-              <a href="/" class="nav-link">Sign In</a>
+              <a href="{{ route('signin') }}" class="nav-link">Sign In</a>
           </li>
           </ul>
 

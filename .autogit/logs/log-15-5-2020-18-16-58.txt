@@ -1,0 +1,25 @@
+-------------------- Auto-Git Log --------------------
+		Mon Jun 15 2020 18:16:58 GMT+0400 (Армения, стандартное время)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/ContactController.php
+* app/Http/Requests/ContactRequest.php
+* app/Models/User.php
+* config/auth.php
+* resources/views/auth/signUp.blade.php
+* resources/views/home.blade.php
+* resources/views/layouts/default.blade.php
+* resources/views/layouts/partials/navbar.blade.php
+
+
+Created files:
+* .autogit/logs/log-15-5-2020-17-1-19.txt
+* public/phone.png
+* public/style.css
+
+
+Deleted files:
+
+
+Renamed files:

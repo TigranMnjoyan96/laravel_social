@@ -3,8 +3,8 @@
 
 @section('content')
     <div class="col-5 mx-auto">
-        <h2>Sign Up</h2>
-        <form action="{{ route('signup') }}" method="POST" novalidate>
+        <h2>Sign In</h2>
+        <form action="{{ route('signin') }}" method="POST" novalidate>
             @csrf
             <div class="form-group">
               <label for="email">Email address</label>
@@ -14,14 +14,6 @@
               @endif
             </div>
 
-            <div class="form-group">
-                <label for="username">Username</label>
-                <input type="text" class="form-control {{ $errors->has('username') ? 'is-invalid' : '' }}" value="{{ Request::old('username') ?: '' }}" name="username" id="username"  placeholder="Enter username">
-                @if ($errors->has('username'))
-                    <span class="help-block text-danger">{{ $errors->first('username') }}</span>
-                @endif
-              </div>
-
 
             <div class="form-group">
               <label for="password">Password</label>
@@ -29,6 +21,10 @@
               @if ($errors->has('password'))
               <span class="help-block text-danger">{{ $errors->first('password') }}</span>
           @endif
+            </div>
+            <div class="form-check">
+              <input type="checkbox" class="form-check-input" id="exampleCheck1">
+              <label class="form-check-label" for="exampleCheck1">Check me out</label>
             </div>
             <button type="submit" class="btn btn-primary">Submit</button>
           </form>

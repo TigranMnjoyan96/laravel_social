@@ -22,4 +22,12 @@ class ContactController extends Controller
 
         return redirect()->route('home')->with('info', 'Successfuly Registration');
     }
+
+    public function signIn() {
+        return view('auth.signIn');
+    }
+
+    public function authSignIn(ContactRequest $req) {
+        dd($req);
+    }
 }
