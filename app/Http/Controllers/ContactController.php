@@ -30,7 +30,12 @@ class ContactController extends Controller
     }
 
     public function authSignIn(Request $req) {
-        if(!Auth::attempt($req->only(['email', 'password']), $req->has('remember'))) {
+        $this->validate($req, [
+            'email' => 'required|email',
+            'password' => 'required|min:6|max:250'
+        ]);
+
+        if(!Auth::attempt($req->only(['email', 'password']))) {
            return redirect()->route('home')->with('info', 'Wrong Email or Password');
         }
 
