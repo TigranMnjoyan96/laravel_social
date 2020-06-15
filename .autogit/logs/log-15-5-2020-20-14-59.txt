@@ -1,0 +1,17 @@
+-------------------- Auto-Git Log --------------------
+		Mon Jun 15 2020 20:14:59 GMT+0400 (Армения, стандартное время)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/ContactController.php
+* app/Http/Requests/SignInRequest.php
+
+
+Created files:
+* .autogit/logs/log-15-5-2020-19-44-44.txt
+
+
+Deleted files:
+
+
+Renamed files:
