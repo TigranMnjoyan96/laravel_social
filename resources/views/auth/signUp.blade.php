@@ -2,7 +2,7 @@
 
 
 @section('content')
-    <div class="col-5 mx-auto mt-3">
+    <div class="col-5 mx-auto">
         <h2>Sign Up</h2>
         <form action="{{ route('signup') }}" method="POST" novalidate>
             @csrf
@@ -25,7 +25,7 @@
 
             <div class="form-group">
               <label for="password">Password</label>
-              <input type="password" class="form-control {{ $errors->has('password') ? 'is-invalid' : '' }}" name="pass" id="password" placeholder="Password">
+              <input type="password" class="form-control {{ $errors->has('password') ? 'is-invalid' : '' }}" name="password" id="password" placeholder="Password">
               @if ($errors->has('password'))
               <span class="help-block text-danger">{{ $errors->first('password') }}</span>
           @endif

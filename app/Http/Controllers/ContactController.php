@@ -4,6 +4,8 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\ContactRequest;
+use App\Models\User;
+
 
 class ContactController extends Controller
 {
@@ -12,6 +14,12 @@ class ContactController extends Controller
     }
 
     public function authSignUp(ContactRequest $req) {
+        User::create([
+            'email' => $req->input('email'),
+            'username' => $req->input('username'),
+            'password' => bcrypt($req->input('password'))
+        ]);
+
         return redirect()->route('home')->with('info', 'Successfuly Registration');
     }
 }

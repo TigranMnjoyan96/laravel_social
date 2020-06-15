@@ -1,5 +1,5 @@
 
-    <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
+    <nav class="navbar navbar-expand-lg navbar-dark bg-warning mb-3">
         @if (Auth::check())
         <a class="navbar-brand" href="{{route('home')}}">Social</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
