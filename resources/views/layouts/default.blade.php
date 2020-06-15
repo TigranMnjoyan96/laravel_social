@@ -10,6 +10,7 @@
 <body>
 
     @include('layouts.partials.navbar')
+    @include('layouts.partials.messages')
 
     <div class="container">
         @yield('content')
