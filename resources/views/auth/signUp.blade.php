@@ -3,15 +3,22 @@
 
 @section('content')
     <h2>Sign Up</h2>
-    <form action="{{ route('signUp') }}" method="POST" novalidate>
+    @if ($errors)
+        @foreach ($errors as $err)
+            <div class="alert-alert-danger">
+                {{ $err }}
+            </div>
+        @endforeach
+    @endif
+    <form action="{{ route('signup') }}" method="POST" novalidate>
         @csrf
         <div class="form-group">
           <label for="email">Email address</label>
-          <input type="email" class="form-control" id="email" aria-describedby="emailHelp" placeholder="Enter email">
+          <input type="email" class="form-control" name="email" id="email" aria-describedby="emailHelp" placeholder="Enter email">
         </div>
         <div class="form-group">
           <label for="password">Password</label>
-          <input type="password" class="form-control" id="password" placeholder="Password">
+          <input type="password" class="form-control" name="pass" id="password" placeholder="Password">
         </div>
         <div class="form-check">
           <input type="checkbox" class="form-check-input" id="exampleCheck1">

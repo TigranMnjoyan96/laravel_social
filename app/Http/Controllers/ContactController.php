@@ -3,6 +3,7 @@
 namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
+use App\Http\Requests\ContactRequest;
 
 class ContactController extends Controller
 {
@@ -10,7 +11,7 @@ class ContactController extends Controller
         return view('auth.signUp');
     }
 
-    public function authSignUp(Request $req) {
-        dd($req);
+    public function authSignUp(ContactRequest $req) {
+        return redirect()->route('home')->with('info', 'Successfuly Registration');
     }
 }
