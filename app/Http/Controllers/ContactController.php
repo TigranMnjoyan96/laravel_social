@@ -4,7 +4,9 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Http\Requests\ContactRequest;
+use App\Http\Requests\SignInRequest;
 use App\Models\User;
+use Auth;
 
 
 class ContactController extends Controller
@@ -27,7 +29,11 @@ class ContactController extends Controller
         return view('auth.signIn');
     }
 
-    public function authSignIn(ContactRequest $req) {
-        dd($req);
+    public function authSignIn(Request $req) {
+        if(!Auth::attempt($req->only(['email', 'password']), $req->has('remember'))) {
+           return redirect()->route('home')->with('info', 'Wrong Email or Password');
+        }
+
+        return redirect()->route('home')->with('info', 'You are logged in');
     }
 }
