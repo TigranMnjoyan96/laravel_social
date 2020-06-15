@@ -29,16 +29,17 @@ class ContactController extends Controller
         return view('auth.signIn');
     }
 
-    public function authSignIn(Request $req) {
-        $this->validate($req, [
-            'email' => 'required|email',
-            'password' => 'required|min:6|max:250'
-        ]);
+    public function authSignIn(SignInRequest $req) {
 
-        if(!Auth::attempt($req->only(['email', 'password']))) {
-           return redirect()->route('home')->with('info', 'Wrong Email or Password');
+        if(!Auth::attempt($req->only(['email', 'password'], $req->has('remember')))) {
+           return redirect()->back()->with('info', 'Wrong Email or Password');
         }
 
         return redirect()->route('home')->with('info', 'You are logged in');
+    }
+
+
+    public function signOut() {
+
     }
 }

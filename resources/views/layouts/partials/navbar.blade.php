@@ -27,13 +27,13 @@
 
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-                <a href="/">user name</a>
+                <a href="/" class="nav-link">{{ Auth::user()->getNameOrUserName() }}</a>
             </li>
             <li class="nav-item">
-                <a href="/">Update Profile</a>
+                <a href="/" class="nav-link">Update Profile</a>
             </li>
             <li class="nav-item">
-                <a href="/">Sign Out</a>
+                <a href="{{ route('signout') }}" class="nav-link">Sign Out</a>
             </li>
           </ul>
           @else

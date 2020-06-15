@@ -14,3 +14,7 @@ Route::post('/signup', 'ContactController@authSignUp')->name('signup');
 // Sign In
 Route::get('/signin', 'ContactController@signIn')->name('signin');
 Route::post('/signin', 'ContactController@authSignIn')->name('signin');
+
+
+// Sign Out
+Route::get('/signout', 'ContactController@signOut')->name('signout');
