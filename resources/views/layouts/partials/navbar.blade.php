@@ -1,6 +1,6 @@
 
     <nav class="navbar navbar-expand-lg navbar-dark bg-warning">
-        @if (!Auth::check())
+        @if (Auth::check())
         <a class="navbar-brand" href="{{route('home')}}">Social</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
           <span class="navbar-toggler-icon"></span>
@@ -41,7 +41,7 @@
 
           <ul class="navbar-nav ml-auto">
             <li class="nav-item">
-              <a href="/" class="nav-link">Sign Up</a>
+              <a href="{{ route('signup') }}" class="nav-link">Sign Up</a>
           </li>
           <li class="nav-item">
               <a href="/" class="nav-link">Sign In</a>
