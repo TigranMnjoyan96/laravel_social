@@ -1,0 +1,20 @@
+-------------------- Auto-Git Log --------------------
+		Tue Jun 16 2020 00:02:25 GMT+0400 (Армения, стандартное время)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/ContactController.php
+* app/Http/Middleware/Authenticate.php
+* app/Http/Middleware/RedirectIfAuthenticated.php
+* routes/web.php
+
+
+Created files:
+* .autogit/logs/log-15-5-2020-23-32-17.txt
+* resources/views/search/result.blade.php
+
+
+Deleted files:
+
+
+Renamed files:
