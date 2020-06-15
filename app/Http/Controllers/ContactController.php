@@ -40,6 +40,8 @@ class ContactController extends Controller
 
 
     public function signOut() {
+        Auth::logout();
 
+        return redirect()->route('home');
     }
 }
