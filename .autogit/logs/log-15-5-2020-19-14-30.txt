@@ -1,0 +1,18 @@
+-------------------- Auto-Git Log --------------------
+		Mon Jun 15 2020 19:14:30 GMT+0400 (Армения, стандартное время)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/ContactController.php
+* resources/views/auth/signIn.blade.php
+
+
+Created files:
+* .autogit/logs/log-15-5-2020-18-44-23.txt
+* app/Http/Requests/SignInRequest.php
+
+
+Deleted files:
+
+
+Renamed files:
