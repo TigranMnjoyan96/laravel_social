@@ -25,6 +25,7 @@ class ContactRequest extends FormRequest
     {
         return [
             'email' => 'required|email|unique',
+            'username' => 'required|alpha_dash|min:3|max:16|unique:',
             'password' => 'required|min:6|max:250'
         ];
     }
