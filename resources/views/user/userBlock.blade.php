@@ -1,13 +1,10 @@
-<div class="media mt-3">
-    <a href="{{ route('profile', ['username' => $user->username]) }}">
-        <img src="{{ $user->getAvatar() }}" class="mr-3" alt="{{ $user->getNameOrUserName() }}">
-    </a>
-    <div class="media-body">
-        <a href="{{ route('profile', ['username' => $user->username]) }}">
-            <h5 class="mt-0">{{ $user->getNameOrUserName() }}</h5>
-        </a>
 
-        @if ($user->location)
+  <div class="card mt-3" style="width: 14rem;">
+    <img class="card-img-top" src="{{ $user->getAvatar() }}" alt="{{ $user->getNameOrUserName() }}">
+    <div class="card-body">
+      <h5 class="card-title">{{ $user->getNameOrUserName() }}</h5>
+      <p class="card-text">{{ $user->email }}</p>
+      @if ($user->location)
             <p>{{ $user->location }}</p>
         @endif
     </div>

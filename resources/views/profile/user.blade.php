@@ -2,6 +2,5 @@
 
 
 @section('content')
-    <p>{{ $username->username }}</p>
-    <p>{{ $username->email }}</p>
+    @include('user.userBlock')
 @endsection

@@ -16,6 +16,6 @@ class ProfileController extends Controller
             abort(404);
         }
 
-        return view('profile.user', ['username' => $username]);
+        return view('profile.user', ['user' => $username]);
     }
 }
