@@ -22,4 +22,5 @@ class SearchController extends Controller
 
         return view('search.result')->with('users', $users);
     }
+
 }

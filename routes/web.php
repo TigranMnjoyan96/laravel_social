@@ -22,3 +22,6 @@ Route::get('/signout', 'ContactController@signOut')->name('signout');
 
 // Search
 Route::get('/search', 'SearchController@searchUser')->name('search');
+
+// User
+Route::get('/user/{username}', 'ProfileController@profileUser')->name('profile');
