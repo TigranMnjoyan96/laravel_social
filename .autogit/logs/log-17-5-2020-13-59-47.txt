@@ -1,0 +1,19 @@
+-------------------- Auto-Git Log --------------------
+		Wed Jun 17 2020 13:59:47 GMT+0400 (Армения, стандартное время)
+------------------------------------------------------
+
+Modified files:
+* app/Http/Controllers/ProfileController.php
+* resources/views/layouts/partials/navbar.blade.php
+* resources/views/profile/user.blade.php
+* resources/views/user/userBlock.blade.php
+
+
+Created files:
+* .autogit/logs/log-17-5-2020-13-29-25.txt
+
+
+Deleted files:
+
+
+Renamed files:
