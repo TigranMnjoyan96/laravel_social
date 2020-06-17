@@ -18,4 +18,12 @@ class ProfileController extends Controller
 
         return view('profile.user', ['user' => $username]);
     }
+
+    public function editProfile() {
+        return view('profile.editProfile');
+    }
+
+    public function postEdit() {
+        return ;
+    }
 }

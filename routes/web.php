@@ -25,3 +25,5 @@ Route::get('/search', 'SearchController@searchUser')->name('search');
 
 // User
 Route::get('/user/{username}', 'ProfileController@profileUser')->name('profile');
+Route::get('/profile/edit', 'profileController@editProfile')->middleware('auth')->name('editProfile');
+Route::post('/profile/postEdit', 'ProfileController@postEdit')->middleware('auth');
